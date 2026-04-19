@@ -1,0 +1,162 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Contenedor del menú */
+.menu-container {
+    display: grid;
+    /* En móviles será 2 columna. En pantallas más grandes se ajustará automáticamente 
+    dividir los pixeles para que sean 4 o dependiendo, para que sea uno son 280 px */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de cada platillo */
+.menu-card {
+    background-color: #1E1E1E;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.15);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del platillo */
+.menu-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: #eee; /* Color de fondo por si no carga la imagen */
+}
+
+/* Contenido de texto */
+.menu-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.menu-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+}
+
+.menu-ingredients {
+    font-size: 11px;
+    color: #777;
+    margin: 0 0 15px 0;
+    flex-grow: 1; /* Para que el espacio entre ingredientes y el footer se expanda */
+}
+
+.menu-price {
+    font-size: 11px;
+    font-weight: bold;
+    color: #A0A0A0;
+}
+
+/* Precio destacado */
+.menu-price span {
+    color: #e91e63;
+}
+
+
+.seccion {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #eee;
+    background-color: #D4AF37;
+    width: 100%;
+    border-radius: 8px;
+    
+}
+
+
+/* Estilos para la sección de postres */
+/* Contenedor principal del menú */
+.menu-horizontal {
+  width: 100%;
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+
+/* Lista de opciones */
+.opciones-menu {
+  display: flex; /* Alinea todos los botones en una sola fila */
+  padding: 10px 15px;
+  margin: 0;
+  list-style-type: none; /* Quita los puntos predeterminados de la lista */
+  gap: 12px;
+}
+
+/* Estilo individual de cada botón/enlace */
+.opciones-menu li a {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 8px 18px;
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  border-radius: 20px; 
+  font-family: Arial, sans-serif; 
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para la categoría seleccionada (activo) */
+.opciones-menu li a.activo, 
+.opciones-menu li a:active {
+  background-color: #CFB53B; 
+  color: white;
+}
+
+/* Sub-menú estilo píldora */
+.submenu {
+    display: flex;
+    overflow-x: auto; /* Permite scroll lateral si son muchos */
+    gap: 10px;
+    padding: 15px;
+    list-style: none;
+    background-color: transparent;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #888;
+    border: 1px solid #444;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+    transition: all 0.3s ease;
+}
+
+.submenu a.activo-sub {
+    background-color: #CFB53B; 
+    color: white;
+    border-color: #D4AF37;
+}
